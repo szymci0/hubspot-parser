@@ -6,3 +6,6 @@ base_run:
 
 help:
 	@python hubspot_parser.py -h
+
+unit_tests:
+	@python hubspot_parser.py -t
