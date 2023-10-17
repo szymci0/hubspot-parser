@@ -29,7 +29,7 @@ An amount of keywords parsed can also be changed manually, use `-k` or `--keywor
   
 ## Example usage
 1. ``python hubspot_parser.py --blog ai -k 4`` - calculates parameters for three latest articles from https://blog.hubspot.com/ai, and prints 4 most used keywords.
-2. ``python hubspot_parser.py --b website -keywords 8`` - calculates parameters for three latest articles from https://blog.hubspot.com/ai, and prints 4 most used keywords.
+2. ``python hubspot_parser.py --b website -keywords 8`` - calculates parameters for three latest articles from https://blog.hubspot.com/website, and prints 4 most used keywords.
 
 ## Unit tests
 You can perform basic unit tests for some script functions by running the script with `-t` argument, or by running ``make unit_tests``.
