@@ -36,11 +36,11 @@ def count_words_test():
 
 def keywords_extraction_test():
     from hubspot_parser import keywords_extraction
-    result = keywords_extraction(TEST_TEXT1)
+    result = keywords_extraction(TEST_TEXT1, num_of_keys=5)
     assert result == ['text', 'duplicates', 'next', 'use', 'buttons']
-    result = keywords_extraction(TEST_TEXT2)
+    result = keywords_extraction(TEST_TEXT2, num_of_keys=5)
     assert result == ['test', 'testing', 'lorem', 'ipsum', 'test testing']
-    result = keywords_extraction(TEST_TEXT3)
+    result = keywords_extraction(TEST_TEXT3, num_of_keys=5)
     assert result == ['sit', 'amet', 'sit amet', 'ipsum', 'dolor']
 
 
