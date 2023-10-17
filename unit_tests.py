@@ -1,3 +1,9 @@
+from statistics import (
+    count_words,
+    count_letters,
+    keywords_extraction,
+)
+
 TEST_TEXT1 = """
     Paste your text here or start fresh. Duplicates are highlighted in real-time. (Once you begin, these instructions will be cleared.)
 
@@ -15,7 +21,6 @@ TEST_TEXT3 = """lorem ipsum dolor sit amet, lorem ipsum dolor sit amet, Lorem ip
 
 
 def count_letters_test():
-    from hubspot_parser import count_letters
     result = count_letters(TEST_TEXT1)
     assert result == 591
     result = count_letters(TEST_TEXT2)
@@ -25,7 +30,6 @@ def count_letters_test():
 
 
 def count_words_test():
-    from hubspot_parser import count_words
     result = count_words(TEST_TEXT1)
     assert result == 122
     result = count_words(TEST_TEXT2)
@@ -35,7 +39,6 @@ def count_words_test():
 
 
 def keywords_extraction_test():
-    from hubspot_parser import keywords_extraction
     result = keywords_extraction(TEST_TEXT1, num_of_keys=5)
     assert result == ['text', 'duplicates', 'next', 'use', 'buttons']
     result = keywords_extraction(TEST_TEXT2, num_of_keys=5)
@@ -48,3 +51,4 @@ def perform_tests():
     count_letters_test()
     count_words_test()
     keywords_extraction_test()
+    print("All test passed!")
