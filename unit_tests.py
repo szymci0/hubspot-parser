@@ -1,4 +1,4 @@
-from statistics import (
+from stats import (
     count_words,
     count_letters,
     keywords_extraction,
