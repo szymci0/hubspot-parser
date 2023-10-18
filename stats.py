@@ -23,7 +23,7 @@ def keywords_extraction(text: str, num_of_keys: int):
     words = [w for w in sanitized_article.split() if w not in STOP_WORDS]
     counts = words
     for n_count in [2, 3]:
-        for x in list(ngrams(words, n_count)):
+        for x in ngrams(words, n_count):
             counts.append(" ".join(x))
     counts = Counter(counts)
     return list(map(lambda tup: tup[0], counts.most_common(num_of_keys)))
